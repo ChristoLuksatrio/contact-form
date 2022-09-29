@@ -15,6 +15,7 @@ import {
   Radio,
   Text,
   Show,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import LogoGrid from "../components/LogoGrid";
 import React, { useState } from "react";
@@ -33,13 +34,12 @@ export default function Home() {
 
   return (
     <Flex
-      flexDirection={{ sm: "column", md: "row" }}
+      flexDirection={{ base: "column", md: "row" }}
       minH={"100vh"}
-      align={"center"}
       justify={"center"}
       bg={"white"}
     >
-      <Stack align={"left"} mb={4} mx={4}>
+      <Stack align={"left"} mb={4} mx={4} width={{ md: "50%" }}>
         <Heading fontSize={"4xl"}>See Dash in action.</Heading>
         <Heading fontSize={"xl"}>
           Thank you for your interest in Dash Enterprise. We&#39;ll be in touch
@@ -59,8 +59,15 @@ export default function Home() {
             cillum dolore eu fugiat nulla pariatur.
           </ListItem>
         </UnorderedList>
+        <Show above="md">
+          <Stack pt={8}>
+            <Box>
+              <Image src="/images/calendar.png" alt="calendar" />
+            </Box>
+          </Stack>
+        </Show>
       </Stack>
-      <Stack>
+      <Stack width={{ base: "100%", md: "50%" }}>
         <Stack px={6} mb={-6} zIndex={50}>
           <Box
             rounded={"lg"}
@@ -75,34 +82,32 @@ export default function Home() {
                   <Radio value="Student">Student</Radio>
                 </Stack>
               </RadioGroup>
-              <FormControl id="firstName">
-                <FormLabel>First name*</FormLabel>
-                <Input type="text" />
-              </FormControl>
-              <FormControl id="lastName">
-                <FormLabel>Last Name*</FormLabel>
-                <Input type="text" />
-              </FormControl>
-              <FormControl id="email">
-                <FormLabel>Business Email*</FormLabel>
-                <Input type="email" />
-              </FormControl>
-              <FormControl id="phone">
-                <FormLabel>Phone*</FormLabel>
-                <Input type="text" />
-              </FormControl>
-              <FormControl id="company">
-                <FormLabel>Company*</FormLabel>
-                <Input type="text" />
-              </FormControl>
-              <FormControl id="companyName">
-                <FormLabel>Company Name*</FormLabel>
-                <Input type="text" />
-              </FormControl>
-              <FormControl id="title">
-                <FormLabel>Title*</FormLabel>
-                <Input type="text" />
-              </FormControl>
+              <SimpleGrid gap={4} columns={[1, 2]}>
+                <FormControl id="firstName">
+                  <FormLabel>First name*</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+                <FormControl id="lastName">
+                  <FormLabel>Last Name*</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+                <FormControl id="email">
+                  <FormLabel>Business Email*</FormLabel>
+                  <Input type="email" />
+                </FormControl>
+                <FormControl id="phone">
+                  <FormLabel>Phone*</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+                <FormControl id="companyName">
+                  <FormLabel>Company Name*</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+                <FormControl id="title">
+                  <FormLabel>Title*</FormLabel>
+                  <Input type="text" />
+                </FormControl>
+              </SimpleGrid>
               <FormControl id="project">
                 <FormLabel>Tell us about your project*</FormLabel>
                 <Input type="text" />
