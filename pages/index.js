@@ -75,7 +75,7 @@ export default function Home() {
         </Show>
       </Stack>
       <Stack width={{ base: "100%", md: "50%" }}>
-        <Stack px={6} mb={-6} zIndex={50}>
+        <Stack px={6} mb={-6} zIndex={40}>
           <Box
             border={"1px"}
             borderColor={useColorModeValue("white", "#282D33")}

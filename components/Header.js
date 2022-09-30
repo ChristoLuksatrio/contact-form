@@ -7,6 +7,10 @@ import {
   Button,
   useColorModeValue,
   useColorMode,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 
 const Header = () => {
@@ -30,12 +34,32 @@ const Header = () => {
         />
       </Link>
       <Box border={"1px"} borderColor={"#dark"} rounded={"lg"} bg={"dark"}>
-        <Button
-          leftIcon={<Image src={`/images/light-icon.png`} alt="Sun Icon" />}
-          onClick={toggleColorMode}
-        >
-          {colorMode === "light" ? "Light" : "Dark"}
-        </Button>
+        <Menu maxWidth="100px">
+          <MenuButton
+            as={Button}
+            leftIcon={<Image src={`/images/light-icon.png`} alt="Sun Icon" />}
+          >
+            {colorMode === "light" ? "Light" : "Dark"}
+          </MenuButton>
+          <MenuList zIndex={50}>
+            <MenuItem
+              display={"flex"}
+              justifyContent={"center"}
+              onClick={toggleColorMode}
+            >
+              <Image src={`/images/light-icon.png`} alt="Sun Icon" mr={2} />
+              Light
+            </MenuItem>
+            <MenuItem
+              display={"flex"}
+              justifyContent={"center"}
+              onClick={toggleColorMode}
+            >
+              <Image src={`/images/dark-icon.png`} alt="Sun Icon" mr={2} />
+              Dark
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Box>
     </Flex>
   );
