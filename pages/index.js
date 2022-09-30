@@ -40,6 +40,8 @@ export default function Home() {
       minH={"100vh"}
       justify={"center"}
       bg={bg}
+      maxWidth={1248}
+      mx={"auto"}
     >
       <Stack align={"left"} mb={4} mx={4} width={{ md: "50%" }}>
         <Heading fontSize={"4xl"}>See Dash in action.</Heading>
@@ -72,8 +74,10 @@ export default function Home() {
       <Stack width={{ base: "100%", md: "50%" }}>
         <Stack px={6} mb={-6} zIndex={50}>
           <Box
+            border={"1px"}
+            borderColor={useColorModeValue("white", "#282D33")}
             rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
+            bg={bg}
             boxShadow={"lg"}
             p={8}
           >
