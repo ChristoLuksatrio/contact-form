@@ -4,11 +4,14 @@ import {
   Link,
   Image,
   Box,
-  Text,
+  Button,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 
 const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex
       h={16}
@@ -23,7 +26,9 @@ const Header = () => {
         <Image h={8} src="/images/logo.png" alt="Plotly Logo" />
       </Link>
       <Box rounded={"lg"} bg={useColorModeValue("white", "gray.700")}>
-        <Text>Light</Text>
+        <Button onClick={toggleColorMode}>
+          {colorMode === "light" ? "Dark" : "Light"}
+        </Button>
       </Box>
     </Flex>
   );

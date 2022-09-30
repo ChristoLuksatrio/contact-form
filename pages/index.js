@@ -32,12 +32,14 @@ export default function Home() {
     { name: "tva-logo.png", alt: "TVA Logo" },
   ];
 
+  const bg = useColorModeValue("white", "black");
+
   return (
     <Flex
       flexDirection={{ base: "column", md: "row" }}
       minH={"100vh"}
       justify={"center"}
-      bg={"white"}
+      bg={bg}
     >
       <Stack align={"left"} mb={4} mx={4} width={{ md: "50%" }}>
         <Heading fontSize={"4xl"}>See Dash in action.</Heading>
