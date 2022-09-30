@@ -45,10 +45,10 @@ export default function Home() {
       color={"#7E8489"}
     >
       <Stack align={"left"} mb={4} mx={4} width={{ md: "50%" }}>
-        <Heading color={"#1E1E1E"} fontSize={"4xl"}>
+        <Heading color={useColorModeValue("#1E1E1E", "white")} fontSize={"4xl"}>
           See Dash in action.
         </Heading>
-        <Heading color={"#1E1E1E"} fontSize={"xl"}>
+        <Heading color={useColorModeValue("#1E1E1E", "white")} fontSize={"xl"}>
           Thank you for your interest in Dash Enterprise. We&#39;ll be in touch
           soon to schedule a demo.
         </Heading>
@@ -86,7 +86,7 @@ export default function Home() {
           >
             <Stack spacing={4}>
               <RadioGroup
-                color={"#1E1E1E"}
+                color={useColorModeValue("#1E1E1E", "white")}
                 onChange={setProfession}
                 value={profession}
               >
