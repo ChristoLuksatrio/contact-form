@@ -23,11 +23,18 @@ const Header = () => {
       mb={6}
     >
       <Link href="/">
-        <Image h={8} src="/images/logo.png" alt="Plotly Logo" />
+        <Image
+          h={8}
+          src={`/images/logo${useColorModeValue("", "-white")}.png`}
+          alt="Plotly Logo"
+        />
       </Link>
-      <Box rounded={"lg"} bg={useColorModeValue("white", "gray.700")}>
-        <Button onClick={toggleColorMode}>
-          {colorMode === "light" ? "Dark" : "Light"}
+      <Box border={"1px"} borderColor={"#dark"} rounded={"lg"} bg={"dark"}>
+        <Button
+          leftIcon={<Image src={`/images/light-icon.png`} alt="Sun Icon" />}
+          onClick={toggleColorMode}
+        >
+          {colorMode === "light" ? "Light" : "Dark"}
         </Button>
       </Box>
     </Flex>

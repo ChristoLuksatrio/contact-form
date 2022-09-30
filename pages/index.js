@@ -42,10 +42,13 @@ export default function Home() {
       bg={bg}
       maxWidth={1248}
       mx={"auto"}
+      color={"#7E8489"}
     >
       <Stack align={"left"} mb={4} mx={4} width={{ md: "50%" }}>
-        <Heading fontSize={"4xl"}>See Dash in action.</Heading>
-        <Heading fontSize={"xl"}>
+        <Heading color={"#1E1E1E"} fontSize={"4xl"}>
+          See Dash in action.
+        </Heading>
+        <Heading color={"#1E1E1E"} fontSize={"xl"}>
           Thank you for your interest in Dash Enterprise. We&#39;ll be in touch
           soon to schedule a demo.
         </Heading>
@@ -82,7 +85,11 @@ export default function Home() {
             p={8}
           >
             <Stack spacing={4}>
-              <RadioGroup onChange={setProfession} value={profession}>
+              <RadioGroup
+                color={"#1E1E1E"}
+                onChange={setProfession}
+                value={profession}
+              >
                 <Stack direction="row">
                   <Radio value="Professional">Professional</Radio>
                   <Radio value="Student">Student</Radio>
@@ -121,13 +128,14 @@ export default function Home() {
               <Stack>
                 <Flex align={"center"}>
                   <Button
-                    bg={"blue.400"}
+                    bg={"#7A76FF"}
                     color={"white"}
                     _hover={{
-                      bg: "blue.500",
+                      bg: "#625ffc",
                     }}
+                    fontSize={"14px"}
                   >
-                    Send
+                    SEND
                   </Button>
                   <Text ml={2}>Required*</Text>
                 </Flex>
